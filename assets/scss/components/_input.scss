@@ -1,0 +1,14 @@
+@import "vue-select/src/scss/vue-select.scss";
+
+.vs__dropdown-toggle {
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  .vs__search &:focus {
+    margin-top: 0;
+  }
+
+  .vs__clear {
+    display: none;
+  }
+}

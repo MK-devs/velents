@@ -1,16 +1,9 @@
-<template> </template>
-
-<script>
-export default {
-  mounted() {
-    this.$api.selectors
-      .getCountries()
-      .then(res => {
-        console.log(res);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  }
-};
-</script>
+<template>
+  <div class="home_page">
+    <b-container>
+      <section id="filter">
+        <FormFilter />
+      </section>
+    </b-container>
+  </div>
+</template>
