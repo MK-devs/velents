@@ -1,5 +1,6 @@
 import usersAPIs from "./modules/users";
 import selectorsAPIs from "./modules/selectors";
+import usersMeetings from "./modules/meetings";
 
 export default class Api {
   constructor(context) {
@@ -10,5 +11,6 @@ export default class Api {
 
     this.users = usersAPIs(this.axios);
     this.selectors = selectorsAPIs(this.axios);
+    this.meetings = usersMeetings(this.axios);
   }
 }

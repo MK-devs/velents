@@ -32,11 +32,11 @@
 
   .users__video {
     .carousel-item {
-      height: 500px;
-
+      height: 550px;
       .carousel-caption {
         position: static;
         padding: 0;
+        text-align: right;
       }
     }
     iframe {

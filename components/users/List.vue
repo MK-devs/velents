@@ -10,6 +10,7 @@
               <i class="far fa-flag"></i>
             </div>
           </div>
+
           <div class="__info text-center">
             <div class="__name">
               <UiComponentsTitle small>

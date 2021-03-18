@@ -19,13 +19,13 @@
                 />
               </div>
             </b-col>
-
+            <!-- users video -->
             <b-col md="5">
               <div class="__usersvideos__wrap">
                 <UsersUserVideo :usersList="users" />
               </div>
             </b-col>
-
+            <!-- users info -->
             <b-col md="3">
               <div class="__userinfo__wrap">
                 <UsersUserInfo :userInfo="userInfo" />

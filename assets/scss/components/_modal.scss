@@ -1,0 +1,14 @@
+.modal {
+  .close {
+    position: relative;
+    top: 4px;
+  }
+
+  .modal-body {
+    padding-bottom: 0;
+  }
+
+  .modal__footer {
+    text-align: right;
+  }
+}
