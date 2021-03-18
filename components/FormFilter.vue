@@ -1,5 +1,5 @@
 <template>
-  <div class="form_filter">
+  <div class="form__filter">
     <b-form>
       <b-row>
         <b-col md="3">
@@ -28,6 +28,13 @@
             v-model="experience_level"
             :options="experience_levels"
           ></v-select>
+        </b-col>
+
+        <b-col md="3">
+          <div class="form__filter__action text-right">
+            <Button type="submit" bgBlue smallRadius>Search</Button>
+            <Button bgBlueTrasparent smallRadius>Clear</Button>
+          </div>
         </b-col>
       </b-row>
     </b-form>

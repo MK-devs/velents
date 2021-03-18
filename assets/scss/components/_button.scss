@@ -1,0 +1,23 @@
+.button__element {
+  padding: 0.7rem 2rem;
+
+  &.button__element--smallradius {
+    border-radius: 1rem;
+  }
+  &.button__element--roundedradius {
+    border-radius: 50%;
+  }
+  &.button__element--block {
+    width: 100%;
+  }
+  &.button__element--bgbluetrasparent {
+    background: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+  &.button__element--bgblue {
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    color: #fff;
+  }
+}

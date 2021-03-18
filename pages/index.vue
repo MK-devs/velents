@@ -1,8 +1,8 @@
 <template>
-  <div class="home_page">
+  <div class="home__page">
     <b-container>
-      <section id="filter">
-        <FormFilter />
+      <section class="home__page__filter">
+        <div class="inner-padding"><FormFilter /></div>
       </section>
     </b-container>
   </div>
