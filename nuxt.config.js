@@ -26,7 +26,11 @@ export default {
   css: ["~/assets/scss/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/api.js", "~/plugins/v-select.js"],
+  plugins: [
+    "~/plugins/api.js",
+    "~/plugins/v-select.js",
+    { src: "~/plugins/toggle.js", ssr: false }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

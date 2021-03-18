@@ -10,9 +10,21 @@
     </div>
 
     <div class="user__info__experiance">
-      <UiComponentsTitle small>{{
-        userInfo.experience_level
-      }}</UiComponentsTitle>
+      <UiComponentsTitle small gray>
+        {{ userInfo.experience_level }}
+      </UiComponentsTitle>
+    </div>
+
+    <div class="user__info__toggle mt-4">
+      <toggle-button
+        :sync="true"
+        v-model="userInfo.flag"
+        :width="125"
+        :height="33"
+        :font-size="14"
+        color="#0505AC"
+        :labels="{ checked: 'Flagged', unchecked: 'unFlagged' }"
+      />
     </div>
   </div>
 </template>

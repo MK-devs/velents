@@ -46,6 +46,7 @@ export default {
         .getUsers()
         .then(res => {
           this.users = res;
+          this.$emit("getUserData", this.users[0]);
         })
         .catch(e => {
           console.log(e);
