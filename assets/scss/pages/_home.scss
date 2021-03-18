@@ -1,0 +1,27 @@
+.users__list {
+  .__box {
+    margin-bottom: 3rem;
+    .__img {
+      position: relative;
+
+      img {
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .__flag {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 0.5rem;
+        padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+        background: $color-primary;
+        border-radius: 0.2rem;
+        i {
+          font-size: 1.2em;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -20,6 +20,16 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 80%;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }

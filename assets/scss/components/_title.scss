@@ -1,0 +1,35 @@
+.title__element {
+  &.title__element--big {
+    font-size: 1.5em;
+  }
+  &.title__element--medium {
+    font-size: 1.2em;
+  }
+  &.title__element--small {
+    font-size: 1em;
+  }
+  &.title__element--extrasmall {
+    font-size: 0.9em;
+  }
+  &.title__element--bold {
+    font-weight: bold;
+  }
+  &.title__element--uppercase {
+    text-transform: uppercase;
+  }
+  &.title__element--center {
+    text-align: center;
+  }
+  &.title__element--blue {
+    color: $color-primary;
+  }
+  &.title__element--white {
+    color: #fff;
+  }
+  &.title__element--danger {
+    color: #ff0000;
+  }
+  &.title__element--success {
+    color: #008000;
+  }
+}

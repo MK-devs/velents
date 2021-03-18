@@ -32,8 +32,12 @@
 
         <b-col md="3">
           <div class="form__filter__action text-right">
-            <Button type="submit" bgBlue smallRadius>Search</Button>
-            <Button bgBlueTrasparent smallRadius>Clear</Button>
+            <UiComponentsButton type="submit" bgBlue smallRadius>
+              Search
+            </UiComponentsButton>
+            <UiComponentsButton bgBlueTrasparent smallRadius>
+              Clear
+            </UiComponentsButton>
           </div>
         </b-col>
       </b-row>
