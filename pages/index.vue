@@ -12,8 +12,16 @@
           <b-row>
             <!-- users list -->
             <b-col md="4">
-              <div class="__users__lists__wrap">
-                <UsersList />
+              <div class="__userslists__wrap">
+                <UsersList @getUserData="userInfo = $event" />
+              </div>
+            </b-col>
+
+            <b-col md="5"></b-col>
+
+            <b-col md="3">
+              <div class="__userinfo__wrap">
+                <UsersUserInfo :userInfo="userInfo" />
               </div>
             </b-col>
           </b-row>
@@ -22,3 +30,13 @@
     </b-container>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      userInfo: {}
+    };
+  }
+};
+</script>

@@ -2,7 +2,7 @@
   <div class="users__list">
     <b-row>
       <b-col md="6" v-for="user in users" :key="user.id">
-        <div class="__box ">
+        <div class="__box" @click="passUserData(user)">
           <div class="__img">
             <b-img fluid-grow :src="user.avatar"></b-img>
 
@@ -12,7 +12,7 @@
           </div>
           <div class="__info text-center">
             <div class="__name">
-              <UiComponentsTitle medium>
+              <UiComponentsTitle small>
                 {{ user.name }}
               </UiComponentsTitle>
             </div>
@@ -50,6 +50,10 @@ export default {
         .catch(e => {
           console.log(e);
         });
+    },
+
+    passUserData(user) {
+      this.$emit("getUserData", user);
     }
   }
 };
