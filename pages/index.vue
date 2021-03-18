@@ -3,7 +3,11 @@
     <b-container>
       <section class="__filter">
         <div class="inner-padding">
-          <FormFilter />
+          <FormFilter
+            @getUserData="userInfo = $event"
+            @searchResults="searchResults = $event"
+            @getUsers="users = $event"
+          />
         </div>
       </section>
 
@@ -15,7 +19,7 @@
               <div class="__userslists__wrap">
                 <UsersList
                   @getUserData="userInfo = $event"
-                  @getUsers="users = $event"
+                  :searchResults="searchResults"
                 />
               </div>
             </b-col>
@@ -43,7 +47,8 @@ export default {
   data() {
     return {
       userInfo: {},
-      users: []
+      users: [],
+      searchResults: []
     };
   }
 };

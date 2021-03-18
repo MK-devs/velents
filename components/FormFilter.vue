@@ -1,6 +1,6 @@
 <template>
   <div class="form__filter">
-    <b-form>
+    <b-form @submit.prevent.stop="getFilterResults">
       <b-row>
         <b-col md="3">
           <v-select
@@ -35,7 +35,7 @@
             <UiComponentsButton type="submit" bgBlue smallRadius>
               Search
             </UiComponentsButton>
-            <UiComponentsButton bgBlueTrasparent smallRadius>
+            <UiComponentsButton @clickFn="clear" bgBlueTrasparent smallRadius>
               Clear
             </UiComponentsButton>
           </div>
@@ -48,6 +48,7 @@
 <script>
 export default {
   mounted() {
+    this.getUsers();
     this.getCountries();
     this.getExperienceLevels();
   },
@@ -61,11 +62,27 @@ export default {
       city: null,
 
       experience_levels: [],
-      experience_level: null
+      experience_level: null,
+
+      users: []
     };
   },
 
   methods: {
+    getUsers() {
+      this.$api.users
+        .getUsers()
+        .then(res => {
+          this.users = res;
+          this.$emit("getUserData", this.users[0]);
+          this.$emit("getUsers", this.users);
+          this.$emit("searchResults", this.users);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    },
+
     getCountries() {
       this.$api.selectors
         .getCountries()
@@ -97,6 +114,28 @@ export default {
         .catch(e => {
           console.log(e);
         });
+    },
+
+    getFilterResults() {
+      this.$api.users
+        .getFilterResults(
+          this.city ? this.city.name : "",
+          this.experience_level ? this.experience_level.name : ""
+        )
+        .then(res => {
+          this.users = res;
+          this.$emit("searchResults", this.users);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    },
+
+    clear() {
+      this.country = null;
+      this.city = null;
+      this.experience_level = null;
+      this.getUsers();
     }
   }
 };

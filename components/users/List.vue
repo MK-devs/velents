@@ -1,7 +1,7 @@
 <template>
   <div class="users__list">
     <b-row>
-      <b-col md="6" v-for="user in users" :key="user.id">
+      <b-col md="6" v-for="user in searchResults" :key="user.id">
         <div class="__box" @click="passUserData(user)">
           <div class="__img">
             <b-img fluid-grow :src="user.avatar"></b-img>
@@ -25,36 +25,21 @@
           </div>
         </div>
       </b-col>
+
+      <div class="no_results" v-if="searchResults.length == 0">
+        <UiComponentsTitle medium blue>No Results</UiComponentsTitle>
+      </div>
     </b-row>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    this.getUsers();
-  },
-
-  data() {
-    return {
-      users: []
-    };
+  props: {
+    searchResults: Array
   },
 
   methods: {
-    getUsers() {
-      this.$api.users
-        .getUsers()
-        .then(res => {
-          this.users = res;
-          this.$emit("getUserData", this.users[0]);
-          this.$emit("getUsers", this.users);
-        })
-        .catch(e => {
-          console.log(e);
-        });
-    },
-
     passUserData(user) {
       this.$emit("getUserData", user);
     }
