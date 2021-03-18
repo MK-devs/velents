@@ -12,12 +12,8 @@
         ></iframe>
 
         <div class="users__video__action mt-4">
-          <UiComponentsButton
-            @clickFn="openModal(video.id)"
-            bgBlueTrasparent
-            smallRadius
-          >
-            <i class="fas fa-mobile mr-2"></i>Schedule A Call
+          <UiComponentsButton @clickFn="openModal(video.id)" bgBlue smallRadius>
+            <i class="fas fa-calendar-alt mr-2"></i>Schedule A Call
           </UiComponentsButton>
 
           <UiComponentsButton
