@@ -1,30 +1,47 @@
-.users__list {
-  .__box {
-    margin-bottom: 3rem;
-    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
-    cursor: pointer;
+.home__page {
+  .users__list {
+    .__box {
+      margin-bottom: 3rem;
+      box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 2rem;
+      cursor: pointer;
 
-    .__img {
-      position: relative;
-      margin-bottom: 1rem;
+      .__img {
+        position: relative;
+        margin-bottom: 1rem;
 
-      .__flag {
-        position: absolute;
-        bottom: 0.5rem;
-        right: 0.5rem;
-        padding: 0.4rem 0.5rem 0.2rem 0.5rem;
-        background: $color-primary;
-        border-radius: 0.2rem;
-        i {
-          font-size: 1.2em;
-          color: #fff;
+        .__flag {
+          position: absolute;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+          background: $color-primary;
+          border-radius: 0.2rem;
+          i {
+            font-size: 1.2em;
+            color: #fff;
+          }
         }
       }
-    }
 
-    .__info {
-      padding-bottom: 1rem;
+      .__info {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .users__video {
+    .carousel-item {
+      height: 500px;
+
+      .carousel-caption {
+        position: static;
+        padding: 0;
+      }
+    }
+    iframe {
+      width: 100% !important;
+      height: 400px !important;
     }
   }
 }

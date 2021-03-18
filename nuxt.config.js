@@ -29,6 +29,7 @@ export default {
   plugins: [
     "~/plugins/api.js",
     "~/plugins/v-select.js",
+    { src: "~/plugins/slider.js", ssr: false },
     { src: "~/plugins/toggle.js", ssr: false }
   ],
 

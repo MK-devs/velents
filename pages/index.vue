@@ -13,11 +13,18 @@
             <!-- users list -->
             <b-col md="4">
               <div class="__userslists__wrap">
-                <UsersList @getUserData="userInfo = $event" />
+                <UsersList
+                  @getUserData="userInfo = $event"
+                  @getUsers="users = $event"
+                />
               </div>
             </b-col>
 
-            <b-col md="5"></b-col>
+            <b-col md="5">
+              <div class="__usersvideos__wrap">
+                <UsersUserVideo :usersList="users" />
+              </div>
+            </b-col>
 
             <b-col md="3">
               <div class="__userinfo__wrap">
@@ -35,7 +42,8 @@
 export default {
   data() {
     return {
-      userInfo: {}
+      userInfo: {},
+      users: []
     };
   }
 };

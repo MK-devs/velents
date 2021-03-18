@@ -47,6 +47,7 @@ export default {
         .then(res => {
           this.users = res;
           this.$emit("getUserData", this.users[0]);
+          this.$emit("getUsers", this.users);
         })
         .catch(e => {
           console.log(e);
