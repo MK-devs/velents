@@ -15,7 +15,7 @@
         <div class="inner-padding">
           <b-row>
             <!-- users list -->
-            <b-col md="4">
+            <b-col xl="4">
               <div class="__userslists__wrap">
                 <UsersList
                   @getUserData="userInfo = $event"
@@ -24,13 +24,13 @@
               </div>
             </b-col>
             <!-- users video -->
-            <b-col md="5">
+            <b-col xl="5">
               <div class="__usersvideos__wrap">
                 <UsersUserVideo :usersList="users" />
               </div>
             </b-col>
             <!-- users info -->
-            <b-col md="3">
+            <b-col xl="3">
               <div class="__userinfo__wrap">
                 <UsersUserInfo :userInfo="userInfo" />
               </div>

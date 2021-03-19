@@ -21,3 +21,19 @@
     color: #fff;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .users__video__action {
+    .button__element {
+      padding: 0.7rem 1rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .form__filter {
+    .button__element {
+      padding: 0.7rem 0.3rem;
+    }
+  }
+}

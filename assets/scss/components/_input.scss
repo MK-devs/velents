@@ -17,3 +17,11 @@
 .v-switch-button {
   border-radius: 5px !important;
 }
+
+@media only screen and (max-width: 767px) {
+  .form__filter {
+    .v-select {
+      margin-bottom: 2rem;
+    }
+  }
+}
